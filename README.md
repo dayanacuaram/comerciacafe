@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Comerciacafé - Tu tienda de café colombiano</title>
+  <title>Comerciacafé</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Navbar -->
+  <!-- Contenido va aquí -->
+
+</body>
+</html>
+  <!-- Barra de Navegación -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center shadow-md">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
     <nav class="space-x-4">
@@ -19,16 +23,14 @@
       <a href="#carrito" class="hover:underline">Carrito</a>
     </nav>
   </header>
-
-  <!-- INICIO -->
+  <!-- Sección de Inicio -->
   <section id="inicio" class="bg-cover bg-center h-[60vh] flex items-center justify-center text-center text-white" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
     <div class="bg-black bg-opacity-50 p-6 rounded-lg">
       <h2 class="text-4xl font-bold mb-4">Bienvenido a Comerciacafé</h2>
       <p class="text-xl">El sabor auténtico del café colombiano, directo de las montañas a tu taza.</p>
     </div>
   </section>
-
-  <!-- PRODUCTOS -->
+  <!-- Sección de Productos -->
   <section id="productos" class="p-10">
     <h2 class="text-3xl font-bold text-center mb-8">Nuestros Productos</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -55,23 +57,20 @@
       </div>
     </div>
   </section>
-
-  <!-- NOSOTROS -->
+  <!-- Sección de Nosotros -->
   <section id="nosotros" class="bg-gray-100 p-10 text-center">
     <h2 class="text-3xl font-bold mb-4">Nuestra Historia</h2>
     <p class="max-w-3xl mx-auto text-lg text-gray-700">
       Comerciacafé nace en el corazón del Eje Cafetero colombiano. Durante más de 30 años, nuestras fincas han cultivado café de altura, seleccionado a mano y procesado con técnicas tradicionales y sostenibles. Hoy llevamos ese mismo sabor auténtico hasta la puerta de tu casa.
     </p>
   </section>
-
-  <!-- CONTACTO -->
+  <!-- Sección de Contacto -->
   <section id="contacto" class="p-10 text-center">
     <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
     <p class="text-lg">¿Tienes dudas o quieres hacer un pedido personalizado?</p>
     <p class="mt-2">📞 <strong>316 397 7891</strong> | 📧 <strong>contacto@comerciacafe.com</strong></p>
   </section>
-
-  <!-- CARRITO -->
+  <!-- Sección de Carrito de Compras -->
   <section id="carrito" class="bg-gray-100 p-10 text-center">
     <h2 class="text-3xl font-bold mb-6">Carrito de Compras</h2>
     <div id="cart-items" class="text-left max-w-xl mx-auto bg-white shadow-md rounded p-4">
@@ -87,12 +86,6 @@
     </div>
     <button onclick="alert('La opción de pago estará disponible pronto.')" class="mt-4 bg-[#5C4033] text-white px-6 py-2 rounded hover:bg-[#4b3321]">Proceder al Pago</button>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#5C4033] text-white text-center p-4 mt-10">
-    &copy; 2025 Comerciacafé. Todos los derechos reservados.
-  </footer>
-
   <script>
     let cart = [];
     const exchangeRates = { USD: 0.00026, EUR: 0.00024, COP: 1 };
@@ -131,6 +124,3 @@
 
     document.getElementById('currency').addEventListener('change', updateCart);
   </script>
-
-</body>
-</html>
