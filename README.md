@@ -45,6 +45,15 @@
         <p class="text-gray-600 mt-2">Tueste medio perfecto para cafetera o prensa francesa.</p>
         <p class="text-lg font-bold mt-2">$15.000 COP</p>
         <button onclick="addToCart('Café Tostado y Molido', 15000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded hover:bg-[#4b3321]">Añadir al carrito</button>
+        <div class="mt-4 text-left text-sm">
+          <p><strong>Especificaciones:</strong></p>
+          <ul>
+            <li>Origen: Eje cafetero, Colombia</li>
+            <li>Proceso: Tostado medio</li>
+            <li>Ideal para: Cafetera y prensa francesa</li>
+            <li>Empaque: Bolsa sellada al vacío de 250g</li>
+          </ul>
+        </div>
       </div>
       <!-- Producto 2 -->
       <div class="bg-white shadow-md rounded-lg p-4 text-center">
@@ -53,6 +62,15 @@
         <p class="text-gray-600 mt-2">Granos frescos, seleccionados y empacados al vacío.</p>
         <p class="text-lg font-bold mt-2">$20.000 COP</p>
         <button onclick="addToCart('Café en Grano', 20000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded hover:bg-[#4b3321]">Añadir al carrito</button>
+        <div class="mt-4 text-left text-sm">
+          <p><strong>Especificaciones:</strong></p>
+          <ul>
+            <li>Origen: Huila, Colombia</li>
+            <li>Proceso: Grano natural</li>
+            <li>Ideal para: Moler según tu gusto</li>
+            <li>Empaque: Bolsa sellada al vacío de 250g</li>
+          </ul>
+        </div>
       </div>
       <!-- Producto 3 -->
       <div class="bg-white shadow-md rounded-lg p-4 text-center">
@@ -61,6 +79,15 @@
         <p class="text-gray-600 mt-2">Ideal para cafeterías, restaurantes y distribuidores.</p>
         <p class="text-lg font-bold mt-2">$500.000 COP</p>
         <button onclick="addToCart('Café al por Mayor', 500000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded hover:bg-[#4b3321]">Añadir al carrito</button>
+        <div class="mt-4 text-left text-sm">
+          <p><strong>Especificaciones:</strong></p>
+          <ul>
+            <li>Origen: Eje cafetero y Huila</li>
+            <li>Proceso: Mezcla de granos de alta calidad</li>
+            <li>Ideal para: Cafeterías, restaurantes</li>
+            <li>Empaque: Bolsa de 5kg</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -69,7 +96,7 @@
   <section id="nosotros" class="bg-gray-100 p-10 text-center">
     <h2 class="text-3xl font-bold mb-4">Nuestra Historia</h2>
     <p class="max-w-3xl mx-auto text-lg text-gray-700">
-      En **Comerciacafé**, nuestro amor por el café colombiano nació en el corazón del Eje Cafetero, una de las regiones más emblemáticas del país. Desde nuestros inicios, hemos trabajado con pasión y dedicación para ofrecerte lo mejor de la tradición cafetera de Colombia, respetando las técnicas de cultivo y procesamiento que se han transmitido de generación en generación.
+      En **Comerciacafé**, nuestro amor por el café colombiano nació en el corazón del Eje Cafetero, una de las regiones más emblemáticas del país. Desde nuestros inicios, hemos trabajado con pasión y dedicación para ofrecerte lo mejor de la tradición cafetera de Colombia, respetando las técnicas de cultivo y procesamiento que se han transmitido de generación en generación. Seleccionamos solo los mejores granos para que disfrutes una experiencia única en cada taza.
     </p>
   </section>
 
@@ -78,7 +105,7 @@
     <h2 class="text-3xl font-bold text-center mb-6">Métodos de Envío</h2>
     <p class="text-lg text-gray-700 mb-4">Ofrecemos diferentes opciones de envío para que recibas tu café en el tiempo y forma que más te convenga.</p>
     <ul class="space-y-4">
-      <li>📦 **Envío Estándar**: 3-5 días hábiles. Costo: $10.000 COP.</li>
+      <li>📦 **Envío Estándar**: 3-5 días hábiles. Costo: $10.000 COP. Envío gratuito en compras superiores a $50.000 COP.</li>
       <li>🚚 **Envío Exprés**: 1-2 días hábiles. Costo: $20.000 COP.</li>
       <li>🌍 **Envíos Internacionales**: Costo y tiempo de entrega varían según el destino. Consulta precios y tiempos de envío para tu país.</li>
     </ul>
@@ -87,7 +114,8 @@
   <!-- GARANTÍAS -->
   <section id="garantias" class="bg-gray-100 p-10">
     <h2 class="text-3xl font-bold text-center mb-6">Garantías</h2>
-    <p class="text-lg text-gray-700 mb-4">En **Comerciacafé** garantizamos la calidad de nuestros productos. Si no estás completamente satisfecho con tu compra, puedes devolverla dentro de los 30 días posteriores a la recepción para un reembolso completo.</p>
+    <p class="text-lg text-gray-700 mb-4">En **Comerciacafé** garantizamos la calidad de nuestros productos. Si no estás completamente satisfecho con tu compra, puedes devolverla dentro de los 30 días posteriores a la recepción para un reembolso completo. Aseguramos que nuestros productos son frescos y de la mejor calidad.</p>
+    <p>En el caso de problemas con el envío o el producto, ofrecemos soporte y solución inmediata. Tu satisfacción es nuestra prioridad.</p>
   </section>
 
   <!-- CONTACTO -->
@@ -95,6 +123,7 @@
     <h2 class="text-3xl font-bold mb-4">Contáctanos</h2>
     <p class="text-lg">¿Tienes dudas o quieres hacer un pedido personalizado?</p>
     <p class="mt-2">📞 <strong>316 397 7891</strong> | 📧 <strong>contacto@comerciacafe.com</strong></p>
+    <p>Nos encanta saber de ti, así que no dudes en escribirnos para cualquier consulta.</p>
   </section>
 
   <!-- CARRITO -->
