@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Comerciacafé</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -43,7 +43,8 @@
   </script>
 </head>
 <body class="bg-white text-gray-800">
-  <!-- Navegación -->
+
+  <!-- Encabezado -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
     <nav class="space-x-4">
@@ -90,7 +91,7 @@
   <!-- Nosotros -->
   <section id="nosotros" class="p-8">
     <h2 class="text-2xl font-bold mb-4 text-center">Sobre Nosotros</h2>
-    <p class="max-w-3xl mx-auto text-justify">Comerciacafé nació hace más de 30 años en las montañas cafeteras de Manizales, Caldas, Colombia. Lo que inició como una finca familiar con pocas hectáreas, hoy es una empresa con visión global. Cultivamos nuestro café con respeto por la tierra, empleando prácticas sostenibles y tecnología de vanguardia, pero conservando el alma artesanal que nos diferencia. Nuestra historia está escrita con trabajo, tradición y una meta clara: llevar el mejor café colombiano al mundo, grano a grano.</p>
+    <p class="max-w-3xl mx-auto text-justify">Comerciacafé nació hace más de 30 años en las fértiles montañas de Manizales, Caldas, Colombia. Lo que comenzó como una finca familiar con pocas hectáreas, hoy es una empresa con visión internacional. Nuestro café es cultivado con prácticas sostenibles y pasión por la tierra, utilizando técnicas tradicionales y modernas para garantizar calidad en cada grano. Hoy, nos proyectamos hacia nuevos mercados globales llevando lo mejor del café colombiano al mundo.</p>
   </section>
 
   <!-- Contacto -->
