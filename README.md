@@ -60,10 +60,19 @@
   <section id="nosotros" class="bg-gray-100 p-10 text-center">
     <h2 class="text-3xl font-bold mb-4">Nuestra Historia</h2>
     <p class="max-w-3xl mx-auto text-lg text-gray-700">
-      En Comerciacafé, somos un equipo apasionado por llevar la excelencia del café colombiano a tu hogar. Nacimos en el corazón del Eje Cafetero, donde durante más de tres décadas, hemos cultivado café de altura, recolectado a mano y procesado con técnicas que preservan su sabor único. 
-      Nuestro compromiso con la sostenibilidad y la calidad nos ha permitido construir relaciones duraderas con productores locales, quienes nos ayudan a llevar el mejor café directamente a tu taza.
-      Cada grano de café que vendemos es una representación del arduo trabajo y la dedicación de quienes lo producen, y nuestra misión es compartir este sabor auténtico con el mundo. 
-      Además, buscamos expandir el sabor del café colombiano más allá de nuestras fronteras, para que todos puedan disfrutar de una experiencia cafetera inigualable.
+      En **Comerciacafé**, nuestro amor por el café colombiano nació en el corazón del Eje Cafetero, una de las regiones más emblemáticas del país. Desde nuestros inicios, hemos trabajado con pasión y dedicación para ofrecerte lo mejor de la tradición cafetera de Colombia, respetando las técnicas de cultivo y procesamiento que se han transmitido de generación en generación.
+    </p>
+    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
+      **Comerciacafé** es una empresa familiar, comprometida con la calidad, la sostenibilidad y el comercio justo. Trabajamos directamente con pequeños productores de café en las montañas de Colombia, garantizando que cada grano que llega a tu taza sea el resultado de un proceso meticuloso y cuidadoso. Nos enorgullece ser parte de una cadena productiva que beneficia tanto a nuestros agricultores como a nuestros clientes, brindándoles un café fresco y de calidad superior.
+    </p>
+    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
+      Nuestro café es más que solo una bebida; es una experiencia que conecta a las personas con la esencia misma de Colombia. Desde el proceso de recolección manual de los granos hasta su tostado y empaque, nos aseguramos de preservar los sabores únicos de cada región cafetera, ofreciendo una variedad de productos que van desde el café tostado y molido hasta el café en grano y presentaciones al por mayor para empresas.
+    </p>
+    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
+      Pero más allá de la calidad de nuestro café, en **Comerciacafé** también estamos comprometidos con la sostenibilidad. Trabajamos para minimizar nuestro impacto ambiental, utilizando prácticas responsables en todo el proceso de producción y distribución. Queremos que, al disfrutar de una taza de nuestro café, también estés apoyando un futuro más verde y justo para las comunidades cafetaleras de Colombia.
+    </p>
+    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
+      Hoy, nos enorgullece llevar la magia del café colombiano a más hogares alrededor del mundo, ofreciendo productos frescos, auténticos y con el sabor único que solo el café de Colombia puede ofrecer. En **Comerciacafé**, cada taza de café cuenta una historia, y nos sentimos honrados de ser parte de la tuya.
     </p>
   </section>
 
@@ -88,51 +97,46 @@
         <option value="EUR">EUR (Euros)</option>
       </select>
     </div>
-    <button onclick="alert('La opción de pago estará disponible pronto.')" class="mt-4 bg-[#5C4033] text-white px-6 py-2 rounded hover:bg-[#4b3321]">Proceder al Pago</button>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#5C4033] text-white text-center p-4 mt-10">
-    &copy; 2025 Comerciacafé. Todos los derechos reservados.
-  </footer>
 
   <script>
     let cart = [];
-    const exchangeRates = { USD: 0.00026, EUR: 0.00024, COP: 1 };
+    const exchangeRates = {
+      COP: 1,
+      USD: 0.25,
+      EUR: 0.23
+    };
 
-    function addToCart(productName, price) {
-      cart.push({ productName, price });
+    function addToCart(productName, productPrice) {
+      cart.push({ name: productName, price: productPrice });
       updateCart();
     }
 
     function updateCart() {
-      const container = document.getElementById('cart-items');
-      const currency = document.getElementById('currency').value;
-      const rate = exchangeRates[currency];
-      container.innerHTML = '';
-
-      if (cart.length === 0) {
-        container.innerHTML = '<p>Aún no has añadido productos al carrito.</p>';
-        return;
-      }
-
-      let total = 0;
-      cart.forEach(item => {
-        const convertedPrice = item.price * rate;
-        total += convertedPrice;
-        const row = document.createElement('div');
-        row.classList.add('flex', 'justify-between', 'border-b', 'py-2');
-        row.innerHTML = `<span>${item.productName}</span><span>${convertedPrice.toFixed(2)} ${currency}</span>`;
-        container.appendChild(row);
-      });
-
-      const totalRow = document.createElement('div');
-      totalRow.classList.add('mt-4', 'font-bold', 'text-right');
-      totalRow.textContent = `Total: ${total.toFixed(2)} ${currency}`;
-      container.appendChild(totalRow);
+      const cartContainer = document.getElementById("cart-items");
+      const currency = document.getElementById("currency").value;
+      let totalPrice = 0;
+      cartContainer.innerHTML = cart.map(item => {
+        totalPrice += item.price * exchangeRates[currency];
+        return `
+          <p>${item.name} - ${formatCurrency(item.price, currency)}</p>
+        `;
+      }).join('');
+      cartContainer.innerHTML += `<hr><p class="font-bold">Total: ${formatCurrency(totalPrice, currency)}</p>`;
     }
 
-    document.getElementById('currency').addEventListener('change', updateCart);
+    function formatCurrency(amount, currency) {
+      switch (currency) {
+        case "USD":
+          return `$${(amount * exchangeRates.USD).toFixed(2)}`;
+        case "EUR":
+          return `€${(amount * exchangeRates.EUR).toFixed(2)}`;
+        default:
+          return `${amount} COP`;
+      }
+    }
+
+    document.getElementById("currency").addEventListener("change", updateCart);
   </script>
 
 </body>
