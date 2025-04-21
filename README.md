@@ -52,6 +52,8 @@
             <li>Proceso: Tostado medio</li>
             <li>Ideal para: Cafetera y prensa francesa</li>
             <li>Empaque: Bolsa sellada al vacío de 250g</li>
+            <li><strong>Almacenamiento:</strong> Mantener en lugar fresco y seco, alejado de la luz solar directa.</li>
+            <li><strong>Duración:</strong> Consumir preferentemente antes de 6 meses desde la fecha de tostado.</li>
           </ul>
         </div>
       </div>
@@ -69,6 +71,8 @@
             <li>Proceso: Grano natural</li>
             <li>Ideal para: Moler según tu gusto</li>
             <li>Empaque: Bolsa sellada al vacío de 250g</li>
+            <li><strong>Almacenamiento:</strong> Conservar en envase hermético para asegurar frescura.</li>
+            <li><strong>Duración:</strong> 12 meses si se mantiene sellado y en condiciones ideales.</li>
           </ul>
         </div>
       </div>
@@ -86,6 +90,8 @@
             <li>Proceso: Mezcla de granos de alta calidad</li>
             <li>Ideal para: Cafeterías, restaurantes</li>
             <li>Empaque: Bolsa de 5kg</li>
+            <li><strong>Almacenamiento:</strong> Conservar en lugar fresco, seco y en envase hermético.</li>
+            <li><strong>Duración:</strong> 18 meses desde la fecha de envasado.</li>
           </ul>
         </div>
       </div>
@@ -140,6 +146,10 @@
         <option value="EUR">EUR (Euros)</option>
       </select>
     </div>
+    <!-- Botón de Pago -->
+    <div class="mt-8">
+      <button class="bg-green-500 text-white px-6 py-3 rounded-full text-lg">Pagar Ahora</button>
+    </div>
   </section>
 
   <script>
@@ -156,43 +166,18 @@
     }
 
     function updateCart() {
-      const cartContainer = document.getElementById("cart-items");
-      const currency = document.getElementById("currency").value;
-      let totalPrice = 0;
-      cartContainer.innerHTML = cart.map(item => {
-        totalPrice += item.price * exchangeRates[currency];
-        return `
-          <p>${item.name} - ${formatCurrency(item.price, currency)}</p>
-        `;
-      }).join('');
-      cartContainer.innerHTML += `<hr><p class="font-bold">Total: ${formatCurrency(totalPrice, currency)}</p>`;
-    }
+      const cartItems = document.getElementById('cart-items');
+      cartItems.innerHTML = '';
 
-    function formatCurrency(amount, currency) {
-      switch (currency) {
-        case "USD":
-          return `$${(amount * exchangeRates.USD).toFixed(2)}`;
-        case "EUR":
-          return `€${(amount * exchangeRates.EUR).toFixed(2)}`;
-        default:
-          return `${amount} COP`;
-      }
-    }
-
-    document.getElementById("currency").addEventListener("change", updateCart);
-
-    // Cambio de idioma
-    document.getElementById("language").addEventListener("change", function() {
-      const lang = this.value;
-      if (lang === "en") {
-        // Aquí agregarías la lógica para traducir todo el sitio
-        alert("Idioma cambiado a inglés. (Aún no implementado completamente.)");
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p>Aún no has añadido productos al carrito.</p>';
       } else {
-        // Lógica para español
-        alert("Idioma cambiado a español.");
+        cart.forEach(item => {
+          cartItems.innerHTML += `<p>${item.name} - $${item.price}</p>`;
+        });
       }
-    });
+    }
   </script>
-
+  
 </body>
 </html>
