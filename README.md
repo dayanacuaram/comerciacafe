@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comerciacafé</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
 </head>
 <body class="bg-white text-gray-800">
   <!-- Navegación -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
+    <img src="logo.png" alt="Comerciacafé Logo" class="h-12">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
     <nav class="space-x-4">
       <a href="index.html" class="hover:underline">Inicio</a>
@@ -43,11 +39,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos - Comerciacafé</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
   <script>
     let carrito = [];
 
@@ -75,6 +66,7 @@
 <body class="bg-white text-gray-800">
   <!-- Navegación -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
+    <img src="logo.png" alt="Comerciacafé Logo" class="h-12">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
     <nav class="space-x-4">
       <a href="index.html" class="hover:underline">Inicio</a>
@@ -124,6 +116,7 @@
 <body class="bg-white text-gray-800">
   <!-- Navegación -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
+    <img src="logo.png" alt="Comerciacafé Logo" class="h-12">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
     <nav class="space-x-4">
       <a href="index.html" class="hover:underline">Inicio</a>
@@ -157,6 +150,7 @@
 <body class="bg-white text-gray-800">
   <!-- Navegación -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
+    <img src="logo.png" alt="Comerciacafé Logo" class="h-12">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
     <nav class="space-x-4">
       <a href="index.html" class="hover:underline">Inicio</a>
@@ -180,52 +174,6 @@
   <!-- Footer -->
   <footer class="bg-gray-100 text-center p-4 mt-8">
     <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
-  </footer><!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito - Comerciacafé</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    let carrito = [];
-
-    function agregarAlCarrito(nombre, precio) {
-      carrito.push({ nombre, precio });
-      actualizarCarrito();
-    }
-
-    function actualizarCarrito() {
-      const lista = document.getElementById("lista-carrito");
-      lista.innerHTML = "";
-      let total = 0;
-
-      carrito.forEach((producto) => {
-        total += producto.precio;
-        const item = document.createElement("li");
-        item.textContent = `${producto.nombre} - $${producto.precio.toFixed(2)}`;
-        lista.appendChild(item);
-      });
-
-      document.getElementById("total-carrito").textContent = `Total: $${total.toFixed(2)}`;
-    }
-
-    function finalizarCompra() {
-      if (carrito.length === 0) {
-        alert("El carrito está vacío. Añade productos para continuar.");
-      } else {
-        alert("Compra realizada con éxito.");
-        carrito = [];
-        actualizarCarrito();
-      }
-    }
-  </script>
-</head>
-<body class="bg-white text-gray-800">
-  <!-- Navegación -->
-  <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Comerciacafé</h1>
-    <nav class="space
-
+  </footer>
 </body>
 </html>
