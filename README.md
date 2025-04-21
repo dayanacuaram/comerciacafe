@@ -3,39 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comerciacafé - Tienda Online</title>
+  <title>Comerciacafé</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    let carrito = [];
-
-    function agregarAlCarrito(nombre, precio) {
-      carrito.push({ nombre, precio });
-      actualizarCarrito();
-    }
-
-    function actualizarCarrito() {
-      const lista = document.getElementById("lista-carrito");
-      lista.innerHTML = "";
-      let total = 0;
-
-      carrito.forEach((producto) => {
-        total += producto.precio;
-        const item = document.createElement("li");
-        item.textContent = `${producto.nombre} - $${producto.precio.toFixed(2)}`;
-        lista.appendChild(item);
-      });
-
-      document.getElementById("total-carrito").textContent = `Total: $${total.toFixed(2)}`;
-    }
-  </script>
 </head>
 <body class="bg-white text-gray-800">
-
-  <!-- Header -->
-  <header class="bg-[#5C4033] p-6 text-white flex justify-between items-center fixed w-full top-0 z-10 shadow-lg">
-    <img src="logo.png" alt="Comerciacafé Logo" class="h-12">
+  <!-- Navegación -->
+  <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
-    <nav class="space-x-6">
+    <nav class="space-x-4">
       <a href="#inicio" class="hover:underline">Inicio</a>
       <a href="#productos" class="hover:underline">Productos</a>
       <a href="#nosotros" class="hover:underline">Nosotros</a>
@@ -45,63 +20,95 @@
   </header>
 
   <!-- Sección de Inicio -->
-  <section id="inicio" class="pt-20 p-8 bg-gray-50 text-center">
-    <h2 class="text-4xl font-bold mb-4">Bienvenidos a Comerciacafé</h2>
-    <p class="text-lg">En Comerciacafé, ofrecemos café de calidad premium directamente de las montañas colombianas. ¡Prueba lo mejor del café colombiano hoy mismo!</p>
+  <section id="inicio" class="p-8 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-4">Bienvenidos a Comerciacafé</h2>
+    <p class="text-lg mb-4">Nuestro café es cultivado con pasión en las montañas de Colombia, un sabor único que ha conquistado corazones. ¡Disfruta de nuestras diversas presentaciones y lleva lo mejor de nuestra tierra a tu hogar!</p>
+    <a href="#productos" class="bg-[#5C4033] text-white py-2 px-4 rounded hover:bg-[#4b3321] transition duration-300">Explora nuestros productos</a>
   </section>
 
   <!-- Sección de Productos -->
-  <section id="productos" class="p-8 bg-white">
-    <h2 class="text-3xl font-bold text-center mb-8">Nuestros Productos</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+  <section id="productos" class="p-8">
+    <h2 class="text-3xl font-bold mb-6 text-center">Nuestros Productos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <!-- Producto 1 -->
-      <div class="border p-4 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold">Café Molido 1 Libra</h3>
-        <p class="mb-4">Precio: $25,000 COP</p>
-        <button onclick="agregarAlCarrito('Café Molido 1 Libra', 25000)" class="bg-[#8B5E3C] text-white px-6 py-2 rounded">Añadir al Carrito</button>
+      <div class="bg-white p-4 shadow-lg rounded-lg">
+        <img src="https://via.placeholder.com/200" alt="Café Tostado y Molido" class="w-full h-32 object-cover rounded-lg mb-4">
+        <h3 class="font-semibold text-lg">Café Tostado y Molido</h3>
+        <p class="text-gray-600">Disfruta del sabor del café recién molido con nuestra variedad de tostado, ideal para cada momento del día.</p>
+        <span class="font-bold mt-2">$15.000 COP</span>
+        <button class="bg-[#5C4033] text-white py-2 px-4 rounded mt-2 hover:bg-[#4b3321] transition duration-300" onclick="addToCart('Café Tostado y Molido', 15000)">Añadir al carrito</button>
       </div>
       <!-- Producto 2 -->
-      <div class="border p-4 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold">Café en Grano 1 Kilo</h3>
-        <p class="mb-4">Precio: $40,000 COP</p>
-        <button onclick="agregarAlCarrito('Café en Grano 1 Kilo', 40000)" class="bg-[#8B5E3C] text-white px-6 py-2 rounded">Añadir al Carrito</button>
+      <div class="bg-white p-4 shadow-lg rounded-lg">
+        <img src="https://via.placeholder.com/200" alt="Café en Grano" class="w-full h-32 object-cover rounded-lg mb-4">
+        <h3 class="font-semibold text-lg">Café en Grano</h3>
+        <p class="text-gray-600">Café en grano 100% colombiano, perfecto para aquellos que prefieren el café fresco recién molido.</p>
+        <span class="font-bold mt-2">$20.000 COP</span>
+        <button class="bg-[#5C4033] text-white py-2 px-4 rounded mt-2 hover:bg-[#4b3321] transition duration-300" onclick="addToCart('Café en Grano', 20000)">Añadir al carrito</button>
       </div>
       <!-- Producto 3 -->
-      <div class="border p-4 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold">Bulto de Café 40 Kilos</h3>
-        <p class="mb-4">Precio: $1,500,000 COP</p>
-        <button onclick="agregarAlCarrito('Bulto de Café 40 Kilos', 1500000)" class="bg-[#8B5E3C] text-white px-6 py-2 rounded">Añadir al Carrito</button>
+      <div class="bg-white p-4 shadow-lg rounded-lg">
+        <img src="https://via.placeholder.com/200" alt="Café al por Mayor" class="w-full h-32 object-cover rounded-lg mb-4">
+        <h3 class="font-semibold text-lg">Café al por Mayor</h3>
+        <p class="text-gray-600">Compra café en grandes cantidades para tu negocio o distribuidor. Precios especiales para pedidos por más de 150 libras.</p>
+        <span class="font-bold mt-2">$500.000 COP</span>
+        <button class="bg-[#5C4033] text-white py-2 px-4 rounded mt-2 hover:bg-[#4b3321] transition duration-300" onclick="addToCart('Café al por Mayor', 500000)">Añadir al carrito</button>
       </div>
     </div>
   </section>
 
   <!-- Sección de Nosotros -->
   <section id="nosotros" class="p-8 bg-gray-100 text-center">
-    <h2 class="text-3xl font-bold mb-4">¿Quiénes Somos?</h2>
-    <p class="text-lg max-w-3xl mx-auto">Comerciacafé comenzó hace 30 años en las montañas de Antioquia, Colombia. Desde entonces, nos hemos dedicado a cultivar el mejor café, seleccionando solo lo mejor para nuestros clientes. Hoy, expandimos nuestras fronteras, llevando el café colombiano a más partes del mundo.</p>
+    <h2 class="text-3xl font-bold mb-4">Sobre Nosotros</h2>
+    <p class="text-lg">Comerciacafé nació hace 30 años en las montañas de Colombia. Con un pequeño cultivo y mucha pasión, comenzamos a producir café de calidad excepcional. Hoy, nos expandimos a nuevos mercados, llevando lo mejor de nuestra tierra a cada rincón del mundo.</p>
   </section>
 
   <!-- Sección de Contacto -->
-  <section id="contacto" class="p-8 bg-white text-center">
-    <h2 class="text-3xl font-bold mb-4">Contacto</h2>
-    <p class="text-lg mb-4">Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros:</p>
-    <ul class="text-lg">
-      <li><strong>Teléfono:</strong> 316 397 7891</li>
-      <li><strong>Email:</strong> contacto@comerciacafe.com</li>
-    </ul>
+  <section id="contacto" class="p-8">
+    <h2 class="text-3xl font-bold mb-6 text-center">Contáctanos</h2>
+    <p class="text-lg text-center">Para más información sobre nuestros productos o realizar un pedido especial, no dudes en contactarnos.</p>
+    <div class="text-center mt-4">
+      <p><strong>Teléfono:</strong> 316 397 7891</p>
+      <p><strong>Email:</strong> contacto@comerciacafe.com</p>
+    </div>
   </section>
 
-  <!-- Carrito -->
-  <section id="carrito" class="p-8 bg-gray-100">
-    <h2 class="text-3xl font-bold mb-4 text-center">Tu Carrito</h2>
-    <ul id="lista-carrito" class="list-disc pl-6 mb-4"></ul>
-    <p id="total-carrito" class="font-semibold text-xl">Total: $0.00</p>
+  <!-- Sección de Carrito -->
+  <section id="carrito" class="p-8 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-4">Tu Carrito</h2>
+    <div id="cart-items" class="mb-4">
+      <p>Aún no has añadido productos al carrito.</p>
+    </div>
+    <button class="bg-[#5C4033] text-white py-2 px-4 rounded hover:bg-[#4b3321] transition duration-300">Ir a pagar</button>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 text-center p-6 mt-8">
+  <footer class="bg-[#5C4033] text-center text-white p-4">
     <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
   </footer>
 
+  <script>
+    let cart = [];
+
+    function addToCart(productName, price) {
+      cart.push({ productName, price });
+      updateCartDisplay();
+    }
+
+    function updateCartDisplay() {
+      const cartItems = document.getElementById('cart-items');
+      if (cart.length > 0) {
+        cartItems.innerHTML = '';
+        cart.forEach(item => {
+          const div = document.createElement('div');
+          div.classList.add('mb-2');
+          div.innerHTML = `${item.productName} - $${item.price}`;
+          cartItems.appendChild(div);
+        });
+      } else {
+        cartItems.innerHTML = 'Aún no has añadido productos al carrito.';
+      }
+    }
+  </script>
 </body>
 </html>
