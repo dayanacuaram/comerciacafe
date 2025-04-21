@@ -17,7 +17,6 @@
       <a href="#productos" class="hover:underline">Productos</a>
       <a href="#nosotros" class="hover:underline">Nosotros</a>
       <a href="#contacto" class="hover:underline">Contacto</a>
-      <a href="#carrito" class="hover:underline">Carrito</a>
     </nav>
   </header>
 
@@ -29,7 +28,7 @@
     </div>
   </section>
 
-  <!-- PRODUCTOS -->
+  <!-- PRODUCTOS Y CARRITO -->
   <section id="productos" class="p-10">
     <h2 class="text-3xl font-bold text-center mb-8">Nuestros Productos</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -55,23 +54,23 @@
         <button onclick="addToCart('Café al por Mayor', 500000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded hover:bg-[#4b3321]">Añadir al carrito</button>
       </div>
     </div>
-  </section>
 
-  <!-- CARRITO -->
-  <section id="carrito" class="bg-gray-100 p-10 text-center">
-    <h2 class="text-3xl font-bold mb-6">Carrito de Compras</h2>
-    <div id="cart-items" class="text-left max-w-xl mx-auto bg-white shadow-md rounded p-4">
-      <p>Aún no has añadido productos al carrito.</p>
+    <!-- Carrito y Cambio de Moneda -->
+    <div id="cart-container" class="mt-8 bg-white shadow-md rounded p-6">
+      <h3 class="text-2xl font-semibold mb-4">Carrito de Compras</h3>
+      <div id="cart-items" class="text-left max-w-xl mx-auto">
+        <p>Aún no has añadido productos al carrito.</p>
+      </div>
+      <div class="mt-4">
+        <p class="mb-2">Selecciona tu moneda preferida:</p>
+        <select id="currency" class="px-3 py-2 rounded border">
+          <option value="COP">COP (Pesos Colombianos)</option>
+          <option value="USD">USD (Dólares)</option>
+          <option value="EUR">EUR (Euros)</option>
+        </select>
+      </div>
+      <button onclick="alert('La opción de pago estará disponible pronto.')" class="mt-4 bg-[#5C4033] text-white px-6 py-2 rounded hover:bg-[#4b3321]">Proceder al Pago</button>
     </div>
-    <div class="mt-4">
-      <p class="mb-2">Selecciona tu moneda preferida:</p>
-      <select id="currency" class="px-3 py-2 rounded border">
-        <option value="COP">COP (Pesos Colombianos)</option>
-        <option value="USD">USD (Dólares)</option>
-        <option value="EUR">EUR (Euros)</option>
-      </select>
-    </div>
-    <button onclick="alert('La opción de pago estará disponible pronto.')" class="mt-4 bg-[#5C4033] text-white px-6 py-2 rounded hover:bg-[#4b3321]">Proceder al Pago</button>
   </section>
 
   <!-- FOOTER -->
