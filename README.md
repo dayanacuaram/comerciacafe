@@ -6,7 +6,8 @@
   <title>Comerciacafé</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800">
+
   <!-- Navegación -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
