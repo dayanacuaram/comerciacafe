@@ -15,8 +15,14 @@
       <a href="#inicio" class="hover:underline">Inicio</a>
       <a href="#productos" class="hover:underline">Productos</a>
       <a href="#nosotros" class="hover:underline">Nosotros</a>
+      <a href="#metodos" class="hover:underline">Métodos de Envío</a>
+      <a href="#garantias" class="hover:underline">Garantías</a>
       <a href="#contacto" class="hover:underline">Contacto</a>
       <a href="#carrito" class="hover:underline">Carrito</a>
+      <select id="language" class="bg-[#5C4033] text-white p-2 rounded hover:bg-[#4b3321]">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
     </nav>
   </header>
 
@@ -32,6 +38,7 @@
   <section id="productos" class="p-10">
     <h2 class="text-3xl font-bold text-center mb-8">Nuestros Productos</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Producto 1 -->
       <div class="bg-white shadow-md rounded-lg p-4 text-center">
         <img src="https://images.unsplash.com/photo-1592842044709-5643a9f71f8e?auto=format&fit=crop&w=800&q=80" alt="Café Tostado" class="w-full h-40 object-cover rounded mb-4">
         <h3 class="text-xl font-semibold">Café Tostado y Molido</h3>
@@ -39,6 +46,7 @@
         <p class="text-lg font-bold mt-2">$15.000 COP</p>
         <button onclick="addToCart('Café Tostado y Molido', 15000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded hover:bg-[#4b3321]">Añadir al carrito</button>
       </div>
+      <!-- Producto 2 -->
       <div class="bg-white shadow-md rounded-lg p-4 text-center">
         <img src="https://images.unsplash.com/photo-1612197619350-196d1df9b44e?auto=format&fit=crop&w=800&q=80" alt="Café en Grano" class="w-full h-40 object-cover rounded mb-4">
         <h3 class="text-xl font-semibold">Café en Grano</h3>
@@ -46,6 +54,7 @@
         <p class="text-lg font-bold mt-2">$20.000 COP</p>
         <button onclick="addToCart('Café en Grano', 20000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded hover:bg-[#4b3321]">Añadir al carrito</button>
       </div>
+      <!-- Producto 3 -->
       <div class="bg-white shadow-md rounded-lg p-4 text-center">
         <img src="https://images.unsplash.com/photo-1601758123927-196dbde0e57e?auto=format&fit=crop&w=800&q=80" alt="Café al por Mayor" class="w-full h-40 object-cover rounded mb-4">
         <h3 class="text-xl font-semibold">Café al por Mayor</h3>
@@ -62,18 +71,23 @@
     <p class="max-w-3xl mx-auto text-lg text-gray-700">
       En **Comerciacafé**, nuestro amor por el café colombiano nació en el corazón del Eje Cafetero, una de las regiones más emblemáticas del país. Desde nuestros inicios, hemos trabajado con pasión y dedicación para ofrecerte lo mejor de la tradición cafetera de Colombia, respetando las técnicas de cultivo y procesamiento que se han transmitido de generación en generación.
     </p>
-    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
-      **Comerciacafé** es una empresa familiar, comprometida con la calidad, la sostenibilidad y el comercio justo. Trabajamos directamente con pequeños productores de café en las montañas de Colombia, garantizando que cada grano que llega a tu taza sea el resultado de un proceso meticuloso y cuidadoso. Nos enorgullece ser parte de una cadena productiva que beneficia tanto a nuestros agricultores como a nuestros clientes, brindándoles un café fresco y de calidad superior.
-    </p>
-    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
-      Nuestro café es más que solo una bebida; es una experiencia que conecta a las personas con la esencia misma de Colombia. Desde el proceso de recolección manual de los granos hasta su tostado y empaque, nos aseguramos de preservar los sabores únicos de cada región cafetera, ofreciendo una variedad de productos que van desde el café tostado y molido hasta el café en grano y presentaciones al por mayor para empresas.
-    </p>
-    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
-      Pero más allá de la calidad de nuestro café, en **Comerciacafé** también estamos comprometidos con la sostenibilidad. Trabajamos para minimizar nuestro impacto ambiental, utilizando prácticas responsables en todo el proceso de producción y distribución. Queremos que, al disfrutar de una taza de nuestro café, también estés apoyando un futuro más verde y justo para las comunidades cafetaleras de Colombia.
-    </p>
-    <p class="max-w-3xl mx-auto text-lg text-gray-700 mt-4">
-      Hoy, nos enorgullece llevar la magia del café colombiano a más hogares alrededor del mundo, ofreciendo productos frescos, auténticos y con el sabor único que solo el café de Colombia puede ofrecer. En **Comerciacafé**, cada taza de café cuenta una historia, y nos sentimos honrados de ser parte de la tuya.
-    </p>
+  </section>
+
+  <!-- MÉTODOS DE ENVÍO -->
+  <section id="metodos" class="p-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Métodos de Envío</h2>
+    <p class="text-lg text-gray-700 mb-4">Ofrecemos diferentes opciones de envío para que recibas tu café en el tiempo y forma que más te convenga.</p>
+    <ul class="space-y-4">
+      <li>📦 **Envío Estándar**: 3-5 días hábiles. Costo: $10.000 COP.</li>
+      <li>🚚 **Envío Exprés**: 1-2 días hábiles. Costo: $20.000 COP.</li>
+      <li>🌍 **Envíos Internacionales**: Costo y tiempo de entrega varían según el destino. Consulta precios y tiempos de envío para tu país.</li>
+    </ul>
+  </section>
+
+  <!-- GARANTÍAS -->
+  <section id="garantias" class="bg-gray-100 p-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Garantías</h2>
+    <p class="text-lg text-gray-700 mb-4">En **Comerciacafé** garantizamos la calidad de nuestros productos. Si no estás completamente satisfecho con tu compra, puedes devolverla dentro de los 30 días posteriores a la recepción para un reembolso completo.</p>
   </section>
 
   <!-- CONTACTO -->
@@ -137,6 +151,18 @@
     }
 
     document.getElementById("currency").addEventListener("change", updateCart);
+
+    // Cambio de idioma
+    document.getElementById("language").addEventListener("change", function() {
+      const lang = this.value;
+      if (lang === "en") {
+        // Aquí agregarías la lógica para traducir todo el sitio
+        alert("Idioma cambiado a inglés. (Aún no implementado completamente.)");
+      } else {
+        // Lógica para español
+        alert("Idioma cambiado a español.");
+      }
+    });
   </script>
 
 </body>
