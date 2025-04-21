@@ -317,3 +317,201 @@
   </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Comerciacafé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="bg-[#5C4033] p-6 text-white">
+    <h1 class="text-3xl font-bold">Comerciacafé</h1>
+  </header>
+
+  <main class="p-8">
+    <h2 class="text-2xl font-bold mb-4">Café Colombiano Premium</h2>
+    <p class="mb-4">Ofrecemos café tostado y molido, así como café en grano en presentaciones de libra, kilo y bultos de 40 kilos. Contamos con precios especiales para compras al por mayor a partir de 150 libras.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Presentación de café" class="rounded-lg shadow">
+      <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="Café en grano" class="rounded-lg shadow">
+      <img src="https://images.unsplash.com/photo-1536520002442-39764a41e7c1" alt="Empaque de café" class="rounded-lg shadow">
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 text-center p-4 mt-8">
+    <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Comerciacafé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function agregarAlCarrito(nombre, precioCOP) {
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precioCOP });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      alert(`Has agregado "${nombre}" al carrito.`);
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="bg-[#5C4033] p-6 text-white">
+    <h1 class="text-3xl font-bold">Nuestros Productos</h1>
+  </header>
+
+  <main class="p-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Producto 1 -->
+      <div class="border rounded-lg p-4 shadow">
+        <h3 class="text-xl font-bold">Café Tostado y Molido - 1 libra</h3>
+        <p class="mb-2">Precio: $25.000 COP</p>
+        <button onclick="agregarAlCarrito('Café Tostado y Molido - 1 libra', 25000)" class="bg-[#5C4033] text-white px-4 py-2 rounded">Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="border rounded-lg p-4 shadow">
+        <h3 class="text-xl font-bold">Café en Grano - 1 kilo</h3>
+        <p class="mb-2">Precio: $48.000 COP</p>
+        <button onclick="agregarAlCarrito('Café en Grano - 1 kilo', 48000)" class="bg-[#5C4033] text-white px-4 py-2 rounded">Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="border rounded-lg p-4 shadow">
+        <h3 class="text-xl font-bold">Bulto de Café en Grano - 40 kilos</h3>
+        <p class="mb-2">Precio: $1.600.000 COP</p>
+        <button onclick="agregarAlCarrito('Bulto de Café en Grano - 40 kilos', 1600000)" class="bg-[#5C4033] text-white px-4 py-2 rounded">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 text-center p-4 mt-8">
+    <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Comerciacafé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="bg-[#5C4033] p-6 text-white">
+    <h1 class="text-3xl font-bold">Sobre Nosotros</h1>
+  </header>
+
+  <main class="p-8 max-w-3xl mx-auto text-justify">
+    <p class="mb-4">Hace 30 años, en una pequeña finca cafetera ubicada en las montañas de Colombia, nació Comerciacafé. Lo que empezó como un sueño familiar con apenas unas hectáreas de cultivo, hoy es una empresa con proyección internacional, dedicada a ofrecer café de alta calidad a clientes exigentes que valoran el sabor, la historia y el compromiso con el medio ambiente.</p>
+
+    <p class="mb-4">A lo largo de estas tres décadas, hemos perfeccionado nuestras técnicas de cultivo, tostado y selección de granos, posicionándonos como una marca reconocida por su autenticidad y responsabilidad social. Queremos seguir creciendo y llevar nuestro café colombiano a cada rincón del mundo.</p>
+
+    <p>¡Gracias por ser parte de nuestra historia!</p>
+  </main>
+
+  <footer class="bg-gray-100 text-center p-4 mt-8">
+    <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Comerciacafé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="bg-[#5C4033] p-6 text-white">
+    <h1 class="text-3xl font-bold">Contacto</h1>
+  </header>
+
+  <main class="p-8 max-w-2xl mx-auto">
+    <p class="mb-6">¿Tienes preguntas o deseas obtener más información sobre nuestros productos o ventas al por mayor? Contáctanos:</p>
+
+    <div class="bg-gray-100 p-6 rounded-lg shadow">
+      <p class="mb-2 font-semibold">Teléfono:</p>
+      <p class="mb-4">📞 316 397 7891</p>
+
+      <p class="mb-2 font-semibold">Correo electrónico:</p>
+      <p class="mb-4">📧 info@comerciacafe.com</p>
+
+      <p class="mb-2 font-semibold">Dirección:</p>
+      <p>Calle 123 #45-67, Manizales, Caldas, Colombia</p>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 text-center p-4 mt-8">
+    <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Comerciacafé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function mostrarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const tbody = document.getElementById('carrito-body');
+      let total = 0;
+
+      carrito.forEach(item => {
+        total += item.precioCOP;
+        const fila = `<tr>
+                        <td class="border px-4 py-2">${item.nombre}</td>
+                        <td class="border px-4 py-2">$${item.precioCOP.toLocaleString()} COP</td>
+                      </tr>`;
+        tbody.innerHTML += fila;
+      });
+
+      document.getElementById('total-cop').textContent = `$${total.toLocaleString()} COP`;
+    }
+
+    function simularPago() {
+      alert('Simulando pago con pasarela PayU...');
+    }
+
+    window.onload = mostrarCarrito;
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="bg-[#5C4033] p-6 text-white">
+    <h1 class="text-3xl font-bold">Tu Carrito</h1>
+  </header>
+
+  <main class="p-8 max-w-4xl mx-auto">
+    <table class="table-auto w-full border mt-4">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border px-4 py-2">Producto</th>
+          <th class="border px-4 py-2">Precio</th>
+        </tr>
+      </thead>
+      <tbody id="carrito-body"></tbody>
+    </table>
+
+    <div class="text-right mt-6">
+      <p class="text-xl font-semibold">Total: <span id="total-cop"></span></p>
+      <button onclick="simularPago()" class="mt-4 bg-green-600 text-white px-6 py-3 rounded">Pagar con PayU</button>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 text-center p-4 mt-8">
+    <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
