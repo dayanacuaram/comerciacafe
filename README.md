@@ -121,3 +121,51 @@
 
 </body>
 </html>
+<!-- SCRIPT DE CARRITO MEJORADO -->
+<script>
+  let cart = [];
+  const exchangeRates = { USD: 0.00026, EUR: 0.00024, COP: 1 };
+
+  function addToCart(productName, price) {
+    const existing = cart.find(item => item.productName === productName);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ productName, price, quantity: 1 });
+    }
+    updateCart();
+  }
+
+  function updateCart() {
+    const container = document.getElementById('cart-items');
+    const currency = document.getElementById('currency').value;
+    const rate = exchangeRates[currency];
+    container.innerHTML = '';
+
+    if (cart.length === 0) {
+      container.innerHTML = '<p>Aún no has añadido productos al carrito.</p>';
+      return;
+    }
+
+    let total = 0;
+    cart.forEach(item => {
+      const convertedPrice = item.price * rate * item.quantity;
+      total += convertedPrice;
+
+      const row = document.createElement('div');
+      row.classList.add('flex', 'justify-between', 'border-b', 'py-2');
+      row.innerHTML = `
+        <span>${item.productName} x${item.quantity}</span>
+        <span>${convertedPrice.toFixed(2)} ${currency}</span>
+      `;
+      container.appendChild(row);
+    });
+
+    const totalRow = document.createElement('div');
+    totalRow.classList.add('mt-4', 'font-bold', 'text-right');
+    totalRow.textContent = `Total: ${total.toFixed(2)} ${currency}`;
+    container.appendChild(totalRow);
+  }
+
+  document.getElementById('currency').addEventListener('change', updateCart);
+</script>
