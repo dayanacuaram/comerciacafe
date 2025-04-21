@@ -134,3 +134,35 @@
   </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comerciacafé</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navegación -->
+  <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Comerciacafé</h1>
+    <nav class="space-x-4">
+      <a href="inicio.html" class="hover:underline">Inicio</a>
+      <a href="productos.html" class="hover:underline">Productos</a>
+      <a href="nosotros.html" class="hover:underline">Nosotros</a>
+      <a href="contacto.html" class="hover:underline">Contacto</a>
+      <a href="carrito.html" class="hover:underline">Carrito</a>
+    </nav>
+  </header>
+
+  <section class="p-8 text-center">
+    <h2 class="text-3xl font-bold mb-4">¡Gracias por visitar Comerciacafé!</h2>
+    <p class="text-lg">Selecciona una de las secciones del menú para conocer más sobre nuestros productos y realizar tu compra.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center p-4 mt-8">
+    <p>&copy; 2025 Comerciacafé. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
