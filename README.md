@@ -115,7 +115,50 @@
     </div>
   </section>
 
-  <!-- BOTÓN DE PAGO -->
+  <!-- MÉTODOS DE ENVÍO -->
+  <section id="metodos" class="p-10 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-8">Métodos de Envío</h2>
+    <div class="space-y-4">
+      <div class="bg-white shadow-md p-6 rounded-lg">
+        <h3 class="text-xl font-semibold">Envío Nacional</h3>
+        <p>Realizamos envíos a todo el territorio colombiano. El tiempo estimado de entrega es de 2 a 5 días hábiles.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-lg">
+        <h3 class="text-xl font-semibold">Envío Internacional</h3>
+        <p>Hacemos envíos a los Estados Unidos, México y Europa. El tiempo estimado de entrega es de 7 a 15 días hábiles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTÍAS -->
+  <section id="garantias" class="p-10 bg-white">
+    <h2 class="text-3xl font-bold text-center mb-8">Garantías y Cuidados</h2>
+    <div class="space-y-4">
+      <div class="bg-white shadow-md p-6 rounded-lg">
+        <h3 class="text-xl font-semibold">Garantía de Calidad</h3>
+        <p>Si no estás satisfecho con la calidad del café, ofrecemos una garantía de devolución de dinero dentro de los primeros 7 días después de la compra.</p>
+      </div>
+      <div class="bg-white shadow-md p-6 rounded-lg">
+        <h3 class="text-xl font-semibold">Instrucciones de Almacenamiento</h3>
+        <p>Conservar los productos en un lugar fresco y seco, alejado de la luz solar directa. Idealmente en envases herméticos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="p-10 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-8">Contáctanos</h2>
+    <div class="bg-white shadow-md p-6 rounded-lg">
+      <h3 class="text-xl font-semibold">Dirección</h3>
+      <p>Calle 123 #45-67, Bogotá, Colombia</p>
+      <h3 class="text-xl font-semibold">Correo Electrónico</h3>
+      <p>contacto@comerciacafe.com</p>
+      <h3 class="text-xl font-semibold">Teléfono</h3>
+      <p>+57 123 456 789</p>
+    </div>
+  </section>
+
+  <!-- CARRO DE COMPRAS -->
   <section id="carrito" class="p-10 text-center">
     <h2 class="text-3xl font-bold mb-8">Carrito de Compras</h2>
     <div class="bg-white shadow-md rounded-lg p-6 mb-6">
@@ -134,6 +177,11 @@
     function addToCart(product, price) {
       console.log(product, price);
     }
+  </script>
+
+</body>
+</html>
+
   </script>
 
 </body>
