@@ -3,106 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Comerciacafé - Tienda de Café Colombiano</title>
+  <title>Comerciacafé</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <header class="bg-[#5C4033] p-4 text-white flex justify-between items-center shadow-md">
     <h1 class="text-2xl font-bold">Comerciacafé</h1>
-    <nav class="space-x-4 text-sm md:text-base">
+    <nav class="space-x-4">
       <a href="#inicio" class="hover:underline">Inicio</a>
       <a href="#productos" class="hover:underline">Productos</a>
-      <a href="#informacion" class="hover:underline">Información</a>
+      <a href="#nosotros" class="hover:underline">Nosotros</a>
+      <a href="#info" class="hover:underline">Información</a>
       <a href="#carrito" class="hover:underline">Carrito</a>
     </nav>
   </header>
 
-  <!-- INICIO -->
-  <section id="inicio" class="bg-cover bg-center h-[60vh] flex items-center justify-center text-center text-white" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1470&q=80');">
-    <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+  <!-- Inicio -->
+  <section id="inicio" class="bg-cover bg-center h-[60vh] flex items-center justify-center text-white text-center" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');">
+    <div class="bg-black bg-opacity-60 p-6 rounded">
       <h2 class="text-4xl font-bold mb-4">Bienvenido a Comerciacafé</h2>
-      <p class="text-xl">Auténtico café colombiano directo del productor a tu taza.</p>
+      <p class="text-xl">Café colombiano auténtico directo de nuestras fincas a tu taza.</p>
     </div>
   </section>
 
-  <!-- PRODUCTOS -->
-  <section id="productos" class="p-10 bg-white border-t border-gray-300">
-    <h2 class="text-3xl font-bold text-center mb-8 text-[#5C4033]">Nuestros Productos</h2>
+  <!-- Productos -->
+  <section id="productos" class="p-10">
+    <h2 class="text-3xl font-bold text-center mb-8">Nuestros Productos</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Producto 1 -->
-      <!-- Producto 2 -->
-      <!-- Producto 3 -->
+      <div class="bg-white shadow-md rounded-lg p-4 text-center">
+        <img src="https://images.unsplash.com/photo-1592842044709-5643a9f71f8e?auto=format&fit=crop&w=800&q=80" alt="Café Tostado" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold">Café Tostado y Molido</h3>
+        <p class="text-gray-600 mt-2">Tueste medio, ideal para cafetera o prensa.</p>
+        <p class="text-lg font-bold mt-2">$15.000 COP</p>
+        <button onclick="addToCart('Café Tostado y Molido', 15000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded">Añadir</button>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-4 text-center">
+        <img src="https://images.unsplash.com/photo-1612197619350-196d1df9b44e?auto=format&fit=crop&w=800&q=80" alt="Café en Grano" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold">Café en Grano</h3>
+        <p class="text-gray-600 mt-2">Fresco y empacado al vacío para conservar aroma.</p>
+        <p class="text-lg font-bold mt-2">$20.000 COP</p>
+        <button onclick="addToCart('Café en Grano', 20000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded">Añadir</button>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-4 text-center">
+        <img src="https://images.unsplash.com/photo-1601758123927-196dbde0e57e?auto=format&fit=crop&w=800&q=80" alt="Mayorista" class="w-full h-40 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold">Café al por Mayor</h3>
+        <p class="text-gray-600 mt-2">Ideal para cafeterías y distribuidores.</p>
+        <p class="text-lg font-bold mt-2">$500.000 COP</p>
+        <button onclick="addToCart('Café al por Mayor', 500000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded">Añadir</button>
+      </div>
     </div>
   </section>
 
-  <!-- INFORMACIÓN DETALLADA -->
-  <section id="informacion" class="bg-gray-100 p-10 border-t border-gray-300">
-    <h2 class="text-3xl font-bold text-center mb-6 text-[#5C4033]">Información Importante</h2>
-    <div class="max-w-4xl mx-auto text-gray-700 space-y-10">
-      <!-- SOBRE NOSOTROS -->
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">Sobre Nosotros</h3>
-        <p class="leading-relaxed">
-          Comerciacafé es una empresa 100% colombiana que nace del amor por el campo y la pasión por el café. Nos dedicamos a producir, tostar y comercializar café especial de alta calidad, cultivado en las fértiles montañas del Eje Cafetero. Trabajamos directamente con caficultores locales, asegurando prácticas sostenibles y comercio justo, para que cada taza que llegue a tu hogar cuente una historia auténtica de origen.
-        </p>
-      </div>
+  <!-- Nosotros -->
+  <section id="nosotros" class="bg-gray-100 p-10 text-center">
+    <h2 class="text-3xl font-bold mb-4">Sobre Nosotros</h2>
+    <p class="max-w-4xl mx-auto text-lg text-gray-700">
+      Comerciacafé nace en el corazón del Eje Cafetero colombiano, con la misión de llevar a cada hogar el auténtico sabor del café de altura. Con más de 30 años de experiencia, nuestras fincas cultivan granos seleccionados a mano y procesados con técnicas tradicionales que respetan el medio ambiente. Nos enorgullece ofrecer un café artesanal que respeta el origen, apoya a nuestros caficultores y deleita a nuestros clientes en cada sorbo.
+    </p>
+  </section>
 
-      <!-- CALIDAD GARANTIZADA -->
+  <!-- Información adicional -->
+  <section id="info" class="p-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Información Importante</h2>
+    <div class="max-w-5xl mx-auto space-y-6 text-gray-700">
       <div>
-        <h3 class="text-2xl font-semibold mb-2">Calidad Garantizada</h3>
-        <p class="leading-relaxed">
-          Nuestro café es cuidadosamente seleccionado a mano, pasa por un proceso de secado natural y tostión artesanal que resalta las notas características de cada grano. Contamos con certificaciones que respaldan nuestro compromiso con la calidad, frescura y sabor. Cada lote es probado por catadores expertos para asegurar un perfil sensorial óptimo.
-        </p>
+        <h3 class="text-2xl font-semibold">🚚 Métodos de Transporte</h3>
+        <p>Enviamos a toda Colombia con transportadoras confiables como Servientrega y Coordinadora. Tiempos de entrega: entre 2 y 5 días hábiles.</p>
       </div>
-
-      <!-- GARANTÍA Y DEVOLUCIONES -->
       <div>
-        <h3 class="text-2xl font-semibold mb-2">Garantía y Devoluciones</h3>
-        <p class="leading-relaxed">
-          Si por alguna razón no estás satisfecho con tu compra, ofrecemos la posibilidad de cambio o devolución dentro de los 7 días hábiles siguientes a la recepción del producto. Nuestra prioridad es tu confianza y satisfacción.
-        </p>
+        <h3 class="text-2xl font-semibold">✅ Calidad Garantizada</h3>
+        <p>Todos nuestros cafés son 100% arábicos, cultivados sin agroquímicos y sometidos a rigurosos controles de calidad. Cada lote se cata antes del envío.</p>
       </div>
-
-      <!-- TRANSPORTE Y ENVÍOS -->
       <div>
-        <h3 class="text-2xl font-semibold mb-2">Transporte y Envíos</h3>
-        <p class="leading-relaxed">
-          Hacemos envíos a toda Colombia mediante empresas de transporte confiables como Servientrega, Coordinadora y Envía. Los tiempos de entrega varían entre 3 y 5 días hábiles dependiendo de la ubicación. Para pedidos internacionales, puedes escribirnos directamente y te ayudaremos con el proceso logístico.
-        </p>
-      </div>
-
-      <!-- ESPECIFICACIONES DEL PRODUCTO -->
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">Especificaciones del Producto</h3>
-        <ul class="list-disc pl-6 space-y-1">
-          <li>Origen: Caldas, Colombia</li>
-          <li>Altura de cultivo: 1.600 - 2.000 msnm</li>
-          <li>Variedad: Arábica Castillo</li>
-          <li>Notas de cata: Chocolate, nuez y caramelo</li>
-          <li>Presentaciones disponibles: 500g, 1kg, bultos de 40kg</li>
+        <h3 class="text-2xl font-semibold">📦 Especificaciones del Producto</h3>
+        <ul class="list-disc list-inside">
+          <li>Origen: Quindío, Colombia</li>
+          <li>Altura: 1.600 – 1.900 m.s.n.m</li>
+          <li>Variedad: Caturra y Castillo</li>
           <li>Empaque: Bolsa hermética con válvula desgasificadora</li>
-          <li>Conservación: Hasta 12 meses en lugar fresco y seco</li>
         </ul>
       </div>
+      <div>
+        <h3 class="text-2xl font-semibold">💬 Atención al Cliente</h3>
+        <p>Escríbenos por WhatsApp al <strong>+57 316 397 7891</strong> o por correo a <strong>contacto@comerciacafe.com</strong>. Respondemos de lunes a sábado de 8 a.m. a 6 p.m.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold">🔒 Garantía</h3>
+        <p>Si tu pedido llega en mal estado, te enviamos uno nuevo sin costo adicional o te devolvemos tu dinero.</p>
+      </div>
     </div>
   </section>
 
-  <!-- CARRITO -->
-  <section id="carrito" class="p-10 bg-white border-t border-gray-300">
-    <h2 class="text-3xl font-bold text-center mb-6 text-[#5C4033]">Carrito de Compras</h2>
-    <!-- CONTENIDO DINÁMICO DEL CARRITO SE INSERTA AQUÍ -->
+  <!-- Carrito -->
+  <section id="carrito" class="bg-gray-100 p-10 text-center">
+    <h2 class="text-3xl font-bold mb-6">🛒 Carrito de Compras</h2>
+    <div class="max-w-2xl mx-auto bg-white p-4 rounded shadow-md text-left" id="cart-items">
+      <p>No has añadido productos al carrito.</p>
+    </div>
+
+    <div class="mt-6">
+      <label class="block mb-2 font-medium">Selecciona tu moneda:</label>
+      <select id="currency" class="px-4 py-2 border rounded">
+        <option value="COP">COP - Peso Colombiano</option>
+        <option value="USD">USD - Dólar</option>
+        <option value="EUR">EUR - Euro</option>
+      </select>
+    </div>
+
+    <button class="mt-8 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded text-lg">Pagar</button>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="bg-[#5C4033] text-white text-center p-4 mt-10">
     &copy; 2025 Comerciacafé. Todos los derechos reservados.
   </footer>
 
-  <!-- SCRIPTS -->
+  <!-- Script Carrito -->
   <script>
-    // Código del carrito e intercambio de monedas
+    let cart = [];
+    const exchangeRates = { COP: 1, USD: 0.00026, EUR: 0.00024 };
+
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      updateCart();
+    }
+
+    function updateCart() {
+      const container = document.getElementById('cart-items');
+      const currency = document.getElementById('currency').value;
+      const rate = exchangeRates[currency];
+      container.innerHTML = '';
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p>No has añadido productos al carrito.</p>';
+        return;
+      }
+
+      let total = 0;
+      cart.forEach(item => {
+        const converted = item.price * rate;
+        total += converted;
+        const row = document.createElement('div');
+        row.className = 'flex justify-between border-b py-2';
+        row.innerHTML = `<span>${item.name}</span><span>${converted.toFixed(2)} ${currency}</span>`;
+        container.appendChild(row);
+      });
+
+      const totalRow = document.createElement('div');
+      totalRow.className = 'mt-4 font-bold text-right';
+      totalRow.textContent = `Total: ${total.toFixed(2)} ${currency}`;
+      container.appendChild(totalRow);
+    }
+
+    document.getElementById('currency').addEventListener('change', updateCart);
   </script>
 
 </body>
