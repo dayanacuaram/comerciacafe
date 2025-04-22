@@ -36,21 +36,21 @@
         <img src="https://images.unsplash.com/photo-1592842044709-5643a9f71f8e?auto=format&fit=crop&w=800&q=80" alt="Café Tostado" class="w-full h-40 object-cover rounded mb-4">
         <h3 class="text-xl font-semibold">Café Tostado y Molido</h3>
         <p class="text-gray-600 mt-2">Tueste medio, ideal para cafetera o prensa.</p>
-        <p class="text-lg font-bold mt-2">$15.000 COP</p>
+        <p class="text-lg font-bold mt-2">$35.000 COP</p>
         <button onclick="addToCart('Café Tostado y Molido', 15000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded">Añadir</button>
       </div>
       <div class="bg-white shadow-md rounded-lg p-4 text-center">
         <img src="https://images.unsplash.com/photo-1612197619350-196d1df9b44e?auto=format&fit=crop&w=800&q=80" alt="Café en Grano" class="w-full h-40 object-cover rounded mb-4">
         <h3 class="text-xl font-semibold">Café en Grano</h3>
         <p class="text-gray-600 mt-2">Fresco y empacado al vacío para conservar aroma.</p>
-        <p class="text-lg font-bold mt-2">$20.000 COP</p>
+        <p class="text-lg font-bold mt-2">$69.000 COP</p>
         <button onclick="addToCart('Café en Grano', 20000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded">Añadir</button>
       </div>
       <div class="bg-white shadow-md rounded-lg p-4 text-center">
         <img src="https://images.unsplash.com/photo-1601758123927-196dbde0e57e?auto=format&fit=crop&w=800&q=80" alt="Mayorista" class="w-full h-40 object-cover rounded mb-4">
         <h3 class="text-xl font-semibold">Café al por Mayor</h3>
         <p class="text-gray-600 mt-2">Ideal para cafeterías y distribuidores.</p>
-        <p class="text-lg font-bold mt-2">$500.000 COP</p>
+        <p class="text-lg font-bold mt-2">$980.000 COP</p>
         <button onclick="addToCart('Café al por Mayor', 500000)" class="mt-3 bg-[#5C4033] text-white px-4 py-2 rounded">Añadir</button>
       </div>
     </div>
@@ -98,7 +98,42 @@
     </div>
   </section>
 
-  <!-- Resto del código continúa igual -->
+  <!-- Carrito -->
+  <section id="carrito" class="p-10 bg-white">
+    <h2 class="text-3xl font-bold text-center mb-6">🛒 Carrito de Compras</h2>
+    <div id="cartItems" class="max-w-4xl mx-auto mb-4 text-gray-700"></div>
+    <div class="max-w-4xl mx-auto text-lg text-right">
+      <p><strong>Total:</strong> <span id="totalCOP">$0 COP</span></p>
+      <p><strong>Total en USD:</strong> <span id="totalUSD">$0</span></p>
+      <p><strong>Total en EUR:</strong> <span id="totalEUR">€0</span></p>
+    </div>
+    <div class="max-w-4xl mx-auto text-right mt-6">
+      <button class="bg-green-600 text-white px-6 py-2 rounded shadow">Proceder al Pago</button>
+    </div>
+  </section>
+
+  <script>
+    let cart = [];
+
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById("cartItems");
+      container.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        container.innerHTML += `<p>${item.product} - $${item.price.toLocaleString()} COP</p>`;
+      });
+
+      document.getElementById("totalCOP").innerText = `$${total.toLocaleString()} COP`;
+      document.getElementById("totalUSD").innerText = `$${(total / 4000).toFixed(2)}`;
+      document.getElementById("totalEUR").innerText = `€${(total / 4400).toFixed(2)}`;
+    }
   </script>
 
 </body>
